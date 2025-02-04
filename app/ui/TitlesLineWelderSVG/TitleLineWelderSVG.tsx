@@ -11,7 +11,7 @@ const TitleLineWelderSVG = () => {
   let progress = 0;
   let x = 0.5;
   let time = Math.PI / 2;
-  let reqId = null;
+  let reqId: any = null;
 
   useEffect(() => {
     setPath(progress);
@@ -35,11 +35,12 @@ const TitleLineWelderSVG = () => {
     }
   };
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: any) => {
     setHoverline(() => true);
     const { movementY, clientX } = e;
-    const pathBound = path.current?.getBoundingClientRect();
-    x = (clientX - pathBound.left) / pathBound.width;
+    const pathBound: DOMRect | undefined =
+      path.current?.getBoundingClientRect();
+    if (pathBound) x = (clientX - pathBound.left) / pathBound.width;
     progress += movementY;
     setPath(progress);
   };
