@@ -51,7 +51,7 @@ const Item = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
             aspernatur minima necessitatibus fugit quos, sunt delectus dolorum
             aut? Porro minima nostrum, similique aperiam deleniti amet rem
-            sapiente aspernatur unde voluptas.
+            sapient aspernatur unde voluptas.
           </p>
         </div>
       </div>
