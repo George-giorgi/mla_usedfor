@@ -1,0 +1,17 @@
+.fadein {
+  width: 300px;
+
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    width: 300px;
+    opacity: 0;
+  }
+  100% {
+    width: 400px;
+    opacity: 1;
+  }
+}

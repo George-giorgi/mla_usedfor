@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "@/app/ui/globals.css";
+import { montserrat } from "./ui/fonts";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Nav from "./ui/Nav/Nav";
+import Footer from "./ui/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} antialiased bg-[#121212] text-[#F5F5F5] `}
       >
-        {children}
+        {/* responsive Note */}
+        <p className=" md:hidden text-lg font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          We are working about Responsive...
+        </p>
+        <div className=" hidden md:block">
+          <Nav />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
