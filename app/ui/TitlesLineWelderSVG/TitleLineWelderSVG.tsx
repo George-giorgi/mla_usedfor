@@ -36,7 +36,7 @@ const TitleLineWelderSVG = () => {
   };
 
   const manageMouseMove = (e) => {
-    setHoverline((prev) => true);
+    setHoverline(() => true);
     const { movementY, clientX } = e;
     const pathBound = path.current?.getBoundingClientRect();
     x = (clientX - pathBound.left) / pathBound.width;
@@ -79,7 +79,7 @@ const TitleLineWelderSVG = () => {
             </li>
             <li> and more ?</li>
             <li className=" marker:text-red-700 list-disc font-semibold">
-              <span className=" text-[#E20816]">Okay</span> let's hover on white
+              <span className=" text-[#E20816]">Okay</span> lets hover on white
               line and start your journey.
             </li>
           </ul>
