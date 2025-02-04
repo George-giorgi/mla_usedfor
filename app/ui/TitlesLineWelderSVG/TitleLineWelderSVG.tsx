@@ -7,7 +7,7 @@ import AdminUserLinks from "../AdminUserLinks/AdminUserLinks";
 const TitleLineWelderSVG = () => {
   const [hoverline, setHoverline] = useState(false);
 
-  const path = useRef<HTMLDivElement>(null);
+  const path = useRef<SVGPathElement | null>(null);
   let progress = 0;
   let x = 0.5;
   let time = Math.PI / 2;
