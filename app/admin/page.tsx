@@ -60,10 +60,10 @@ const AdminPage = () => {
         </div>
         <div className=" flex-1 p-20 italic">
           <p className="">
-            " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
             quisquam porro, quam laudantium quis iusto inventore ratione,
             reprehenderit non, dolorem vitae. Veniam magnam saepe iure!
-            Voluptatibus molestiae cumque tempore similique... "
+            Voluptatibus molestiae cumque tempore similique...
           </p>
         </div>
       </div>
