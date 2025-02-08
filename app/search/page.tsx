@@ -1,7 +1,11 @@
 import Search from "../ui/search/search";
 import Link from "next/link";
+import { fetchItems } from "../lib/data";
 
-const SearchPage = () => {
+const SearchPage = async () => {
+  const data = await fetchItems();
+  console.log(data);
+
   return (
     <div>
       <Search />
