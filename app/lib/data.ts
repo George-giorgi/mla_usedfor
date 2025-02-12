@@ -1,5 +1,18 @@
 import prisma from "./prisma";
 
+const fetchFilteredItems = async (query: string) => {
+  const items = prisma.item.findMany({
+    where: {
+      OR: [{ uuid: { startsWith: query } }],
+    },
+    select: {
+      uuid: true,
+    },
+  });
+
+  return items;
+};
+
 // es satestod searchze gamoviyenot
 const fetchItems = async () => {
   const data = await prisma.item.findMany();
@@ -21,4 +34,10 @@ const fetchItems3 = async () => {
   return data;
 };
 
-export { fetchItems, fetchItems1, fetchItems2, fetchItems3 };
+export {
+  fetchItems,
+  fetchItems1,
+  fetchItems2,
+  fetchItems3,
+  fetchFilteredItems,
+};
