@@ -3,14 +3,26 @@ import prisma from "./prisma";
 const fetchFilteredItems = async (query: string) => {
   const items = prisma.item.findMany({
     where: {
-      OR: [{ uuid: { startsWith: query } }],
+      OR: [{ uuid: { contains: query } }, { name: { contains: query } }],
     },
     select: {
       uuid: true,
+      name: true,
+      id: true,
     },
   });
 
   return items;
+};
+// find itebs by ID
+const findeItem = async (itemId: any) => {
+  const item = await prisma.item.findUnique({
+    where: {
+      id: parseInt(itemId),
+    },
+  });
+
+  return item;
 };
 
 // es satestod searchze gamoviyenot
@@ -40,4 +52,5 @@ export {
   fetchItems2,
   fetchItems3,
   fetchFilteredItems,
+  findeItem,
 };

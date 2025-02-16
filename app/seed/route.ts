@@ -3,9 +3,9 @@ import prisma from "@/app/lib/prisma";
 
 export async function GET() {
   try {
-    const insertedItems = await Promise.all(
-      Items.map((item) => prisma.item.create({ data: item }))
-    );
+    // const insertedItems = await Promise.all(
+    //   Items.map((item) => prisma.item.create({ data: item }))
+    // );
 
     // await prisma.item.deleteMany();
 

@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Item" ALTER COLUMN "mistakesphotoURL" DROP DEFAULT,
+ALTER COLUMN "usedphotoURL" DROP DEFAULT;

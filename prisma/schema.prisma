@@ -20,4 +20,6 @@ model Item {
   usedfor   String
   tipstriks String
   mistakes  String
+  usedphoto_url String @default("")
+  mistakesphoto_url String @default("")
 }

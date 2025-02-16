@@ -12,6 +12,8 @@ export type Item = {
   usedfor: string;
   tipstriks: string;
   mistakes: string;
+  usedphoto_url: string;
+  mistakesphoto_url: string;
 };
 export type Item1 = {
   id: number;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { fetchItems } from "../lib/data";
 import SearchedItems from "../ui/searchedItems/Searcheditems";
 import { Suspense } from "react";
+import TestSkeletons from "../ui/Skeletons/TestSkeleton";
 
 const SearchPage = async (props: {
   searchParams: Promise<{
@@ -17,7 +18,7 @@ const SearchPage = async (props: {
   return (
     <div>
       <Search placeholder="Enter your part number..." />
-      <div className=" ml-[9%] mt-5">
+      <div className=" ml-[9%] mt-2">
         <Suspense>
           <SearchedItems query={query} />
         </Suspense>
